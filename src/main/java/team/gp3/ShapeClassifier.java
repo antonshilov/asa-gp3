@@ -1,3 +1,4 @@
+package team.gp3;
 
 public class ShapeClassifier {
   private int badGuesses;
@@ -40,8 +41,7 @@ public class ShapeClassifier {
         shapeGuessResult = classify2Parameters(parameters[1], parameters[1]);
         if (shapeGuessResult.equals("Ellipse")) {
           calcPerim = calculateEllipsePerimeter(parameters[0],parameters[1]);
-        }
-        else {
+        } else {
           calcPerim = calculateCirclePerimeter(parameters[0]);
         }
         break;
@@ -53,8 +53,7 @@ public class ShapeClassifier {
         shapeGuessResult = classify4Parameters(parameters[0], parameters[1],parameters[2], parameters[3]);
         if (shapeGuessResult.equals("Rectangle")) {
           calcPerim = calculateRectanglePerimeter(parameters[0], parameters[3],parameters[2], parameters[3]);
-        }
-        else {
+        } else {
           calcPerim = calculateRectanglePerimeter(parameters[0], parameters[1],parameters[2], parameters[3]);
         }
     }
@@ -64,38 +63,22 @@ public class ShapeClassifier {
     Boolean isEvenOddCorrect = null;
 
     // check the shape guess
-    if (shapeGuessResult.equals(shapeGuess))
-      isShapeGuessCorrect = true;
-    else
-      isShapeGuessCorrect = false;
+    isShapeGuessCorrect = shapeGuessResult.equals(shapeGuess);
 
     // check the size guess
 
     if (calcPerim > 200 && sizeGuess.equals("Large")) {
       isSizeGuessCorrect = true;
-    }
-    else if (calcPerim < 10 && sizeGuess.equals("Small")) {
-      isSizeGuessCorrect = true;
-    }
-    else {
-      isSizeGuessCorrect = false;
-    }
+    } else isSizeGuessCorrect = calcPerim < 10 && sizeGuess.equals("Small");
 
     if ( 0 == (calcPerim % 2) && evenOddGuess.equals("Yes")) {
       isEvenOddCorrect = true;
-    }
-    else if ( 0 != (calcPerim % 2) && evenOddGuess.equals("No")) {
-      isEvenOddCorrect = true;
-    }
-    else {
-      isEvenOddCorrect = false;
-    }
+    } else isEvenOddCorrect = 0 != (calcPerim % 2) && evenOddGuess.equals("No");
 
     if (isShapeGuessCorrect && isSizeGuessCorrect && isEvenOddCorrect) {
       badGuesses=0;
       return "Yes";
-    }
-    else {
+    } else {
       // too many bad guesses
       badGuesses++;
       if (badGuesses >= 3) {
@@ -121,9 +104,7 @@ public class ShapeClassifier {
     if (side1 == side2) {
 
       return (2 * side1) + (2 * side3);
-    }
-
-    else if (side2 == side3) {
+    } else if (side2 == side3) {
       return (2 * side1) + (2 * side2);
     }
 
@@ -176,13 +157,11 @@ public class ShapeClassifier {
   private String classify2Parameters(int a, int b) {
     if (a == b) {
       return twoParamGuesses[0];
-    }
-    else if (a == 0) {
+    } else if (a == 0) {
       if (b > 0) {
         return twoParamGuesses[1];
       }
-    }
-    else if (a > 1) {
+    } else if (a > 1) {
       if (b != 0) {
         return twoParamGuesses[1];
       }
@@ -195,14 +174,11 @@ public class ShapeClassifier {
     if (a == b && c == d) {
       if (a != c) {
         return fourParamGuesses[1];
-      }
-      else
+      } else
         return fourParamGuesses[0];
-    }
-    else if (b == d && c == a) {
+    } else if (b == d && c == a) {
       return fourParamGuesses[0];
-    }
-    else if (b == c && a == d) {
+    } else if (b == c && a == d) {
       return fourParamGuesses[0];
     }
     return  "";
