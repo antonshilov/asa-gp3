@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gradle-simple.iml" filepath="$PROJECT_DIR$/gradle-simple.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-simple_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-simple_main.iml" group="gradle-simple" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-simple_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-simple_test.iml" group="gradle-simple" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asa-gp3-master.iml" filepath="$PROJECT_DIR$/.idea/modules/asa-gp3-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asa-gp3-master_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asa-gp3-master_main.iml" group="asa-gp3-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asa-gp3-master_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asa-gp3-master_test.iml" group="asa-gp3-master" />
     </modules>
   </component>
 </project>

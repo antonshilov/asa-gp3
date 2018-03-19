@@ -227,7 +227,7 @@ public class ShapeClassifier {
   public static void main(String[] args) {
     System.out.println("Hello world !");
 
-    ShapeClassifier shapeClassifier = new ShapeClassifier();
+        ShapeClassifier shapeClassifier = new ShapeClassifier();
     //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,100,100,100"));
     //        System.out.println(shapeClassifier.evaluateGuess("Line,Large,Yes,300"));
     //        System.out.println(shapeClassifier.evaluateGuess("Circle,Large,Yes,300,500"));
@@ -236,7 +236,7 @@ public class ShapeClassifier {
     //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Small,Yes,20,20,20"));
     //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,No,99,99,99"));
     //        System.out.println(shapeClassifier.evaluateGuess("Circle,Large,Yes,300"));
-    System.out.println(shapeClassifier.evaluateGuess("Ellipse,Large,Yes,300,500"));
+            System.out.println(shapeClassifier.evaluateGuess("Ellipse,Large,Yes,300,500"));
     //        System.out.println(shapeClassifier.evaluateGuess("Square,Large,Yes,100,500,100,500"));
     //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Small,Yes,2,2,2"));
     //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,99,99,99"));
