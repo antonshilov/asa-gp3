@@ -1,0 +1,22 @@
+Shape, Size, Even, p1, p2, p3, p4 ,Result
+Line, Large, true,1,1,1,1,yes
+Line, Small, false,1,4095,4095,4095,no
+Line, Large, false,1,0,0,0,yes
+Line, Small, true,1,50,50,50,no
+Line, Large, true,1,15,15,15,yes
+Line, Small, false,1,70,70,70,no
+Line, Large, true,1,135,135,135,no
+Line, Small, true,4095,1,4095,0,yes
+Line, Large, false,4095,4095,1,50,yes
+Line, Small, false,4095,0,50,1,yes
+Line, Large, true,4095,50,0,4095,yes
+Line, Small, false,4095,15,70,135,yes
+Line, Small, false,4095,70,15,15,yes
+Line, Small, false,4095,135,135,70,yes
+Line, Small, false,0,1,0,50,yes
+Line, Large, true,0,4095,50,0,yes
+Line, Small, true,0,0,1,4095,yes
+Line, Large, false,0,50,4095,1,yes
+Line, Small, true,0,15,135,15,yes
+Line, Large, true,0,70,15,135,yes
+Line, Large, true,0,135,70,1,yes

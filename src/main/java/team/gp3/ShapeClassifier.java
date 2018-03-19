@@ -77,7 +77,7 @@ public class ShapeClassifier {
 
     if (isShapeGuessCorrect && isSizeGuessCorrect && isEvenOddCorrect) {
       badGuesses=0;
-      return "Yes";
+      return "yes";
     } else {
       // too many bad guesses
       badGuesses++;
@@ -85,7 +85,7 @@ public class ShapeClassifier {
         System.out.println("Bad guess limit Exceeded");
         System.exit(1);
       }
-      return "No";
+      return "no";
     }
   }
 

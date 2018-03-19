@@ -25,6 +25,7 @@ repositories {
 dependencies {
     compile 'com.google.guava:guava:18.0'
     testCompile 'junit:junit:4.12'
+    testCompile 'pl.pragmatists:JUnitParams:1.1.1'
 
 }
 task sourcesJar(type: Jar, dependsOn: classes) {
