@@ -19,15 +19,15 @@ public class ShapeClassifier {
     String sizeGuess = getSizeGuess(arg);
     String evenOddGuess = getEvenOddGuess(arg);
     int calcPerim = 0;
-
-    if (shapeGuess == null)
-      shapeGuess = "";
-
-    if (sizeGuess == null)
-      sizeGuess = "";
-
-    if (evenOddGuess == null)
-      evenOddGuess = "";
+//    CHANGE It has no sense as all of these three variables never equals null
+//        if (shapeGuess == null)
+//            shapeGuess = "";
+//
+//        if (sizeGuess == null)
+//            sizeGuess = "";
+//
+//        if (evenOddGuess == null)
+//            evenOddGuess = "";
 
 
     switch (parameters.length) {
@@ -38,7 +38,7 @@ public class ShapeClassifier {
         }
         break;
       case 2:
-        shapeGuessResult = classify2Parameters(parameters[1], parameters[1]);
+        shapeGuessResult = classify2Parameters(parameters[0], parameters[1]); // CHANGE(wtbx10) : was shapeGuessResult = classify2Parameters(parameters[1], parameters[1]);
         if (shapeGuessResult.equals("Ellipse")) {
           calcPerim = calculateEllipsePerimeter(parameters[0],parameters[1]);
         }
@@ -72,20 +72,20 @@ public class ShapeClassifier {
 
     // check the size guess
 
-    if (calcPerim > 200 && sizeGuess.equals("Large")) {
+    if (calcPerim > 100 && sizeGuess.equals("Large")) { // CHANGE(wtbx7), was: if (calcPerim > 200 && sizeGuess.equals("Large")) {
       isSizeGuessCorrect = true;
     }
-    else if (calcPerim < 10 && sizeGuess.equals("Small")) {
+    else if (calcPerim <= 100 && sizeGuess.equals("Small")) { // CHANGE(wtbx7), was: else if (calcPerim < 10 && sizeGuess.equals("Small")) {
       isSizeGuessCorrect = true;
     }
     else {
       isSizeGuessCorrect = false;
     }
-
-    if ( 0 == (calcPerim % 2) && evenOddGuess.equals("Yes")) {
+    int productOfParameters=productOfArrayElements(parameters); // CHANGE(wtbx8) new string
+    if ( 0 == (productOfParameters % 2) && evenOddGuess.equals("Yes")) { // CHANGE(wtbx8), was: if ( 0 == (calcPerim % 2) && evenOddGuess.equals("Yes")) {
       isEvenOddCorrect = true;
     }
-    else if ( 0 != (calcPerim % 2) && evenOddGuess.equals("No")) {
+    else if ( 0 != (productOfParameters % 2) && evenOddGuess.equals("No")) { // CHANGE(wtbx8), was: else if ( 0 != (calcPerim % 2) && evenOddGuess.equals("No")) {
       isEvenOddCorrect = true;
     }
     else {
@@ -195,10 +195,10 @@ public class ShapeClassifier {
   private String classify4Parameters(int a, int b, int c, int d) {
     if (a == b && c == d) {
       if (a != c) {
-        return fourParamGuesses[1];
+        return fourParamGuesses[0]; // CHANGE(wtbx5), was: return fourParamGuesses[1];
       }
       else
-        return fourParamGuesses[0];
+        return fourParamGuesses[1]; // CHANGE(wtbx5), was: return fourParamGuesses[0];
     }
     else if (b == d && c == a) {
       return fourParamGuesses[0];
@@ -224,22 +224,37 @@ public class ShapeClassifier {
     return "";
   }
 
+  // Calculate product of array elements
+  int productOfArrayElements(Integer[] parameters){
+    if (parameters==null) return 0;
+    int result =1;
+    for (int i=0; i<parameters.length; i++){
+      if (parameters[i]==null) return 0;
+      result=result*parameters[i];
+    }
+    return result;
+  }
+
+
   public static void main(String[] args) {
+
     System.out.println("Hello world !");
 
     ShapeClassifier shapeClassifier = new ShapeClassifier();
-    //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,100,100,100"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Line,Large,Yes,300"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Circle,Large,Yes,300,500"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Rectangle,Large,Yes,500,500,500,500"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,100,200,100"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Small,Yes,20,20,20"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,No,99,99,99"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Circle,Large,Yes,300"));
+//        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,100,100,100"));
+//        System.out.println(shapeClassifier.evaluateGuess("Line,Large,Yes,300"));
+//        System.out.println(shapeClassifier.evaluateGuess("Circle,Large,Yes,300,500"));
+//        System.out.println(shapeClassifier.evaluateGuess("Rectangle,Large,Yes,500,500,500,500"));
+//        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,100,200,100"));
+//        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Small,Yes,20,20,20"));
+//        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,No,99,99,99"));
+//        System.out.println(shapeClassifier.evaluateGuess("Circle,Large,Yes,300"));
     System.out.println(shapeClassifier.evaluateGuess("Ellipse,Large,Yes,300,500"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Square,Large,Yes,100,500,100,500"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Small,Yes,2,2,2"));
-    //        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,99,99,99"));
+//        System.out.println(shapeClassifier.evaluateGuess("Square,Large,Yes,100,500,100,500"));
+//        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Small,Yes,2,2,2"));
+//        System.out.println(shapeClassifier.evaluateGuess("Equilateral,Large,Yes,99,99,99"));
+
+
 
   }
 }

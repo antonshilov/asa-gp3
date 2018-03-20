@@ -1,15 +1,25 @@
 
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ýÆc8ÓŸÐû£,
+lsquid:UnusedPrivateMethod"=Remove this unused private "calculateSquarePerimeter" method.(ï¡£íýÿÿÿÿ8ô°˜¨¤,
+Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(äÔ»øÿÿÿÿ8ô°˜¨¤,
+<squid:S1659" Declare "db" on a separate line.(±î‚ñ8ô°˜¨¤,
+Ksquid:S1066"/Merge this if statement with the enclosing one.(¼ãÌÏ8ô°˜¨¤,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¯ÙãÕ8ô°˜¨¤,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³ô½ý8ô°˜¨¤,
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷º‘8ô°˜¨¤,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(þ±úÍ8ô°˜¨¤,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÁØÈÕþÿÿÿÿ8ô°˜¨¤,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(…±ªëÿÿÿÿÿ8ô°˜¨¤,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(×É›Øúÿÿÿÿ8ô°˜¨¤,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¸Í÷×ýÿÿÿÿ8ô°˜¨¤,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³¥ºÔ8ô°˜¨¤,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–£À€ýÿÿÿÿ8ô°˜¨¤,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨´äÄÿÿÿÿÿ8ô°˜¨¤,
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ýÆc8ô°˜¨¤,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÆŠæ¨8ÓŸÐû£,
-lsquid:UnusedPrivateMethod"=Remove this unused private "calculateSquarePerimeter" method.(ï¡£íýÿÿÿÿ8„ÿÐû£,
-Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(äÔ»øÿÿÿÿ8„ÿÐû£,
-<squid:S1659" Declare "db" on a separate line.(±î‚ñ8„ÿÐû£,
-Ksquid:S1066"/Merge this if statement with the enclosing one.(¼ãÌÏ8„ÿÐû£,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨´äÄÿÿÿÿÿ8„ÿÐû£,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¬†Ë¦8„ÿÐû£,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¬†Ë¦8ô°˜¨¤,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(‚ÞÏ¥ýÿÿÿÿ8„ÿÐû£,
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(É¸Ë¸üÿÿÿÿ8„ÿÐû£,
-Gsquid:S1172",Remove this unused method parameter "side4".(·ò„88„ÿÐû£,
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ÞÏ¥ýÿÿÿÿ8ô°˜¨¤,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÆŠæ¨8ô°˜¨¤,
+ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(É¸Ë¸üÿÿÿÿ8ô°˜¨¤,
+Gsquid:S1172",Remove this unused method parameter "side4".(·ò„88ô°˜¨¤,
