@@ -1,22 +1,220 @@
-Shape, Size, Even, p1, p2, p3, p4 ,Result
-Line, Large, true,1,1,1,1,yes
-Line, Small, false,1,4095,4095,4095,no
-Line, Large, false,1,0,0,0,yes
-Line, Small, true,1,50,50,50,no
-Line, Large, true,1,15,15,15,yes
-Line, Small, false,1,70,70,70,no
-Line, Large, true,1,135,135,135,no
-Line, Small, true,4095,1,4095,0,yes
-Line, Large, false,4095,4095,1,50,yes
-Line, Small, false,4095,0,50,1,yes
-Line, Large, true,4095,50,0,4095,yes
-Line, Small, false,4095,15,70,135,yes
-Line, Small, false,4095,70,15,15,yes
-Line, Small, false,4095,135,135,70,yes
-Line, Small, false,0,1,0,50,yes
-Line, Large, true,0,4095,50,0,yes
-Line, Small, true,0,0,1,4095,yes
-Line, Large, false,0,50,4095,1,yes
-Line, Small, true,0,15,135,15,yes
-Line, Large, true,0,70,15,135,yes
-Line, Large, true,0,135,70,1,yes
+Shape      ,Size ,Even ,p1  ,p2  ,p3  ,p4
+Line       ,Large,true ,1   ,1   ,1   ,1
+Line       ,Small,false,1   ,4095,4095,4095
+Line       ,Large,false,1   ,0   ,0   ,0
+Line       ,Small,true ,4095,1   ,4095,0
+Line       ,Small,false,4095,4095,1   ,1
+Line       ,Small,true ,4095,0   ,0   ,0
+Line       ,Large,true ,100 ,0   ,0   ,0
+Line       ,Large,false,101 ,0   ,0   ,0
+Line       ,Large,true ,50  ,50  ,0   ,0
+Line       ,Small,false,50  ,51  ,0   ,0
+Line       ,Large,true ,33  ,34  ,33  ,0
+Line       ,Small,false,25  ,25  ,25  ,26
+Circle     ,Large,true ,1   ,1   ,4095,4095
+Circle     ,Small,true ,1   ,4095,1   ,0
+Circle     ,Small,false,1   ,0   ,0   ,0
+Circle     ,Small,false,4095,1   ,1   ,4095
+Circle     ,Large,false,4095,4095,4095,1
+Circle     ,Large,true ,4095,0   ,0   ,0
+Circle     ,Small,false,100 ,0   ,0   ,0
+Circle     ,Small,true ,101 ,0   ,0   ,0
+Circle     ,Small,false,50  ,50  ,0   ,0
+Circle     ,Large,true ,50  ,51  ,0   ,0
+Circle     ,Small,false,33  ,34  ,34  ,0
+Circle     ,Large,true ,25  ,25  ,25  ,25
+Ellipse    ,Large,false,1   ,1   ,0   ,0
+Ellipse    ,Large,true ,1   ,4095,1   ,4095
+Ellipse    ,Small,true ,1   ,0   ,0   ,0
+Ellipse    ,Small,true ,4095,1   ,4095,1
+Ellipse    ,Large,false,4095,4095,0   ,0
+Ellipse    ,Large,false,4095,0   ,0   ,0
+Ellipse    ,Large,false,100 ,0   ,0   ,0
+Ellipse    ,Small,false,101 ,0   ,0   ,0
+Ellipse    ,Large,false,50  ,50  ,0   ,0
+Ellipse    ,Small,true ,50  ,51  ,0   ,0
+Ellipse    ,Small,false,33  ,34  ,33  ,0
+Ellipse    ,Large,true ,25  ,25  ,25  ,26
+Equilateral,Large,false,1   ,1   ,1   ,0
+Equilateral,Small,true ,1   ,4095,0   ,0
+Equilateral,Large,true ,1   ,0   ,0   ,0
+Equilateral,Small,true ,4095,1   ,0   ,0
+Equilateral,Large,true ,4095,4095,4095,4095
+Equilateral,Small,false,4095,0   ,0   ,0
+Equilateral,Large,false,100 ,0   ,0   ,0
+Equilateral,Small,true ,101 ,0   ,0   ,0
+Equilateral,Large,true ,50  ,50  ,0   ,0
+Equilateral,Small,false,50  ,51  ,0   ,0
+Equilateral,Large,true ,33  ,34  ,34  ,0
+Equilateral,Small,false,25  ,25  ,25  ,25
+Isosceles  ,Small,false,1   ,1   ,1   ,1
+Isosceles  ,Large,true ,1   ,4095,4095,0
+Isosceles  ,Small,true ,1   ,0   ,0   ,0
+Isosceles  ,Large,false,4095,1   ,4095,4095
+Isosceles  ,Large,true ,4095,4095,1   ,0
+Isosceles  ,Large,false,4095,0   ,0   ,0
+Isosceles  ,Small,true ,100 ,0   ,0   ,0
+Isosceles  ,Small,false,101 ,0   ,0   ,0
+Isosceles  ,Large,true ,50  ,50  ,0   ,0
+Isosceles  ,Small,false,50  ,51  ,0   ,0
+Isosceles  ,Large,false,33  ,34  ,33  ,0
+Isosceles  ,Small,true ,25  ,25  ,25  ,26
+Scalene    ,Large,true ,1   ,1   ,1   ,1
+Scalene    ,Small,false,1   ,4095,4095,1
+Scalene    ,Large,false,1   ,0   ,0   ,0
+Scalene    ,Small,true ,4095,1   ,4095,4095
+Scalene    ,Large,true ,4095,4095,1   ,0
+Scalene    ,Small,true ,4095,0   ,0   ,0
+Scalene    ,Small,false,100 ,0   ,0   ,0
+Scalene    ,Large,true ,101 ,0   ,0   ,0
+Scalene    ,Large,false,50  ,50  ,0   ,0
+Scalene    ,Small,true ,50  ,51  ,0   ,0
+Scalene    ,Large,false,33  ,34  ,34  ,0
+Scalene    ,Small,true ,25  ,25  ,25  ,25
+Square     ,Large,false,1   ,1   ,1   ,1
+Square     ,Small,true ,1   ,4095,4095,4095
+Square     ,Large,true ,1   ,0   ,0   ,0
+Square     ,Small,false,4095,1   ,4095,0
+Square     ,Large,true ,4095,4095,1   ,1
+Square     ,Small,false,4095,0   ,0   ,0
+Square     ,Large,false,100 ,0   ,0   ,0
+Square     ,Small,false,101 ,0   ,0   ,0
+Square     ,Large,true ,50  ,50  ,0   ,0
+Square     ,Small,false,50  ,51  ,0   ,0
+Square     ,Large,true ,33  ,34  ,33  ,0
+Square     ,Small,false,25  ,25  ,25  ,26
+Rectangle  ,Large,true ,1   ,1   ,1   ,4095
+Rectangle  ,Small,false,1   ,4095,4095,1
+Rectangle  ,Large,false,1   ,0   ,0   ,0
+Rectangle  ,Small,true ,4095,1   ,4095,0
+Rectangle  ,Large,false,4095,4095,1   ,4095
+Rectangle  ,Small,true ,4095,0   ,0   ,0
+Rectangle  ,Large,true ,100 ,0   ,0   ,0
+Rectangle  ,Small,false,101 ,0   ,0   ,0
+Rectangle  ,Large,true ,50  ,50  ,0   ,0
+Rectangle  ,Small,false,50  ,51  ,0   ,0
+Rectangle  ,Large,true ,33  ,34  ,34  ,0
+Rectangle  ,Small,false,25  ,25  ,25  ,25
+Ellipse    ,Small,false,4095,1   ,1   ,4095
+Equilateral,Small,true ,4095,4095,1   ,1
+Equilateral,Large,false,1   ,1   ,4095,1
+Ellipse    ,Large,false,1   ,4095,4095,1
+Line       ,Large,false,1   ,1   ,0   ,0
+Circle     ,Small,false,1   ,1   ,0   ,0
+Isosceles  ,Small,true ,1   ,1   ,0   ,0
+Scalene    ,Small,false,1   ,1   ,0   ,0
+Square     ,Large,true ,4095,1   ,0   ,0
+Rectangle  ,Small,false,1   ,1   ,0   ,0
+Line       ,Large,true ,1   ,4095,0   ,0
+Circle     ,Large,true ,1   ,4095,0   ,0
+Isosceles  ,Small,false,1   ,4095,0   ,0
+Scalene    ,Small,false,1   ,4095,0   ,0
+Square     ,Small,false,4095,4095,0   ,0
+Rectangle  ,Large,true ,1   ,4095,0   ,0
+Circle     ,Large,true ,33  ,34  ,33  ,0
+Equilateral,Small,true ,33  ,34  ,33  ,0
+Scalene    ,Small,true ,33  ,34  ,33  ,0
+Rectangle  ,Small,false,33  ,34  ,33  ,0
+Line       ,Small,false,33  ,34  ,34  ,0
+Ellipse    ,Large,true ,33  ,34  ,34  ,0
+Isosceles  ,Small,true ,33  ,34  ,34  ,0
+Square     ,Small,false,33  ,34  ,34  ,0
+Circle     ,Large,true ,1   ,1   ,1   ,1
+Ellipse    ,Small,true ,1   ,4095,1   ,1
+Rectangle  ,Large,true ,4095,1   ,1   ,1
+Line       ,Large,true ,4095,1   ,4095,1
+Isosceles  ,Small,true ,4095,4095,4095,1
+Square     ,Large,true ,1   ,4095,4095,1
+Line       ,Large,true ,4095,1   ,1   ,4095
+Equilateral,Small,false,1   ,1   ,1   ,4095
+Isosceles  ,Small,true ,1   ,4095,1   ,4095
+Scalene    ,Large,false,1   ,4095,1   ,4095
+Square     ,Large,false,4095,1   ,1   ,4095
+Ellipse    ,Large,false,1   ,1   ,4095,4095
+Rectangle  ,Large,false,1   ,4095,4095,4095
+Line       ,Small,true ,1   ,4095,1   ,0
+Ellipse    ,Large,false,1   ,1   ,1   ,0
+Square     ,Small,true ,1   ,4095,1   ,0
+Rectangle  ,Small,true ,4095,1   ,1   ,0
+Circle     ,Small,false,4095,4095,4095,0
+Ellipse    ,Small,true ,1   ,1   ,4095,0
+Equilateral,Small,false,4095,4095,4095,0
+Scalene    ,Large,true ,4095,4095,4095,0
+Circle     ,Small,false,25  ,25  ,25  ,26
+Equilateral,Large,false,25  ,25  ,25  ,26
+Scalene    ,Large,false,25  ,25  ,25  ,26
+Rectangle  ,Large,true ,25  ,25  ,25  ,26
+Line       ,Large,true ,25  ,25  ,25  ,25
+Ellipse    ,Small,false,25  ,25  ,25  ,25
+Isosceles  ,Large,false,25  ,25  ,25  ,25
+Square     ,Large,true ,25  ,25  ,25  ,25
+Circle     ,Large,true ,1   ,4095,1   ,4095
+Scalene    ,Small,false,4095,1   ,1   ,1
+Isosceles  ,Large,true ,1   ,4095,4095,1
+Line       ,Large,true ,25  ,25  ,25  ,26
+Circle     ,Large,true ,25  ,25  ,25  ,26
+Isosceles  ,Large,false,25  ,25  ,25  ,26
+Square     ,Large,true ,25  ,25  ,25  ,26
+Ellipse    ,Large,true ,25  ,25  ,25  ,25
+Equilateral,Large,true ,25  ,25  ,25  ,25
+Scalene    ,Large,false,25  ,25  ,25  ,25
+Rectangle  ,Large,true ,25  ,25  ,25  ,25
+Circle     ,Small,false,1   ,4095,4095,1
+Square     ,Small,true ,1   ,1   ,1   ,1
+Rectangle  ,Small,true ,4095,4095,4095,4095
+Ellipse    ,Small,false,25  ,25  ,25  ,26
+Equilateral,Small,true ,25  ,25  ,25  ,26
+Scalene    ,Small,true ,25  ,25  ,25  ,26
+Rectangle  ,Small,false,25  ,25  ,25  ,26
+Line       ,Small,false,25  ,25  ,25  ,25
+Circle     ,Small,false,25  ,25  ,25  ,25
+Isosceles  ,Small,true ,25  ,25  ,25  ,25
+Square     ,Small,false,25  ,25  ,25  ,25
+Ellipse    ,Large,true ,33  ,34  ,33  ,0
+Equilateral,Large,false,33  ,34  ,33  ,0
+Scalene    ,Large,false,33  ,34  ,33  ,0
+Rectangle  ,Large,true ,33  ,34  ,33  ,0
+Line       ,Large,true ,33  ,34  ,34  ,0
+Circle     ,Large,true ,33  ,34  ,34  ,0
+Isosceles  ,Large,false,33  ,34  ,34  ,0
+Square     ,Large,true ,33  ,34  ,34  ,0
+Line       ,Small,false,33  ,34  ,33  ,0
+Circle     ,Small,false,33  ,34  ,33  ,0
+Isosceles  ,Small,true ,33  ,34  ,33  ,0
+Square     ,Small,false,33  ,34  ,33  ,0
+Ellipse    ,Small,false,33  ,34  ,34  ,0
+Equilateral,Small,false,33  ,34  ,34  ,0
+Scalene    ,Small,true ,33  ,34  ,34  ,0
+Rectangle  ,Small,false,33  ,34  ,34  ,0
+Circle     ,Large,true ,50  ,50  ,0   ,0
+Line       ,Large,true ,50  ,51  ,0   ,0
+Ellipse    ,Large,false,50  ,51  ,0   ,0
+Equilateral,Large,true ,50  ,51  ,0   ,0
+Isosceles  ,Large,true ,50  ,51  ,0   ,0
+Scalene    ,Large,false,50  ,51  ,0   ,0
+Square     ,Large,true ,50  ,51  ,0   ,0
+Rectangle  ,Large,true ,50  ,51  ,0   ,0
+Line       ,Small,false,50  ,50  ,0   ,0
+Ellipse    ,Small,true ,50  ,50  ,0   ,0
+Equilateral,Small,false,50  ,50  ,0   ,0
+Isosceles  ,Small,false,50  ,50  ,0   ,0
+Scalene    ,Small,true ,50  ,50  ,0   ,0
+Square     ,Small,false,50  ,50  ,0   ,0
+Rectangle  ,Small,false,50  ,50  ,0   ,0
+Circle     ,Small,false,50  ,51  ,0   ,0
+Circle     ,Large,true ,100 ,0   ,0   ,0
+Isosceles  ,Large,false,100 ,0   ,0   ,0
+Scalene    ,Large,true ,100 ,0   ,0   ,0
+Circle     ,Large,false,101 ,0   ,0   ,0
+Ellipse    ,Large,true ,101 ,0   ,0   ,0
+Equilateral,Large,false,101 ,0   ,0   ,0
+Isosceles  ,Large,true ,101 ,0   ,0   ,0
+Square     ,Large,true ,101 ,0   ,0   ,0
+Rectangle  ,Large,true ,101 ,0   ,0   ,0
+Line       ,Small,false,100 ,0   ,0   ,0
+Ellipse    ,Small,true ,100 ,0   ,0   ,0
+Equilateral,Small,true ,100 ,0   ,0   ,0
+Square     ,Small,true ,100 ,0   ,0   ,0
+Rectangle  ,Small,false,100 ,0   ,0   ,0
+Line       ,Small,true ,101 ,0   ,0   ,0
+Scalene    ,Small,false,101 ,0   ,0   ,0

@@ -6,12 +6,14 @@ import junitparams.mappers.CsvWithHeaderMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static org.junit.Assert.assertEquals;
+
 @RunWith(JUnitParamsRunner.class)
-public class Triplestest {
+public class DoublesTest {
 
     @Test
     @FileParameters(
-            value = "file:\\Users\\vaccu\\IdeaProjects\\gradle-simple\\src\\test\\java\\team\\gp3\\triples.csv",
+            value = "file:\\Users\\vaccu\\IdeaProjects\\gradle-simple\\src\\test\\java\\team\\gp3\\doubles.csv",
             mapper = CsvWithHeaderMapper.class)
     public void test(
             String Shape,
@@ -20,13 +22,15 @@ public class Triplestest {
             String p1,
             String p2,
             String p3,
-            String p4
-//            String Result
+            String p4,
+            String Result
     ) {
         String input = String.format("%s,%s,%s,%s%s%s%s", Shape, Size, Even, p1, parseParam(p2), parseParam(p3), parseParam(p4));
 //        sbTestResults.append(input).append(", ").append(Result);
         ShapeClassifier sc = new ShapeClassifier();
-//        assertEquals(sc.evaluateGuess(input), Result);
+//        sc.evaluateGuess(input);
+//        assertEquals(true,true);
+        assertEquals(Result, sc.evaluateGuess(input));
     }
 
     private String parseParam(String value) {

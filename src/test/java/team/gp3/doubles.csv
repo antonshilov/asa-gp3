@@ -1,0 +1,88 @@
+Shape      ,Size ,Even,p1  ,p2  ,p3  ,p4  ,Result
+Line       ,Small,No  ,1   ,4095,4095,4095,No
+Line       ,Large,Yes ,4095,0   ,0   ,0   ,No
+Line       ,Small,No  ,100 ,0   ,0   ,0   ,No
+Line       ,Large,No  ,101 ,0   ,0   ,0   ,Yes
+Line       ,Small,Yes ,50  ,50  ,0   ,0   ,No
+Line       ,Large,Yes ,33  ,34  ,33  ,0   ,No
+Line       ,Small,No  ,25  ,25  ,25  ,26  ,No
+Circle     ,Large,Yes ,1   ,1   ,1   ,1   ,No
+Circle     ,Small,No  ,4095,4095,4095,1   ,No
+Circle     ,Large,Yes ,100 ,0   ,0   ,0   ,No
+Circle     ,Small,Yes ,101 ,0   ,0   ,0   ,No
+Circle     ,Large,No  ,50  ,51  ,0   ,0   ,No
+Circle     ,Small,No  ,33  ,34  ,34  ,0   ,No
+Circle     ,Large,Yes ,25  ,25  ,25  ,25  ,No
+Ellipse    ,Small,No  ,1   ,0   ,0   ,0   ,No
+Ellipse    ,Large,Yes ,4095,1   ,1   ,4095,No
+Ellipse    ,Large,Yes ,100 ,0   ,0   ,0   ,No
+Ellipse    ,Large,No  ,101 ,0   ,0   ,0   ,No
+Ellipse    ,Large,No  ,50  ,50  ,0   ,0   ,No
+Ellipse    ,Small,No  ,33  ,34  ,33  ,0   ,No
+Ellipse    ,Large,Yes ,25  ,25  ,25  ,26  ,No
+Equilateral,Small,Yes ,1   ,1   ,4095,0   ,No
+Equilateral,Large,No  ,4095,4095,1   ,0   ,No
+Equilateral,Large,No  ,100 ,0   ,0   ,0   ,No
+Equilateral,Large,Yes ,101 ,0   ,0   ,0   ,No
+Equilateral,Small,Yes ,50  ,51  ,0   ,0   ,No
+Equilateral,Large,Yes ,33  ,34  ,34  ,0   ,No
+Equilateral,Small,No  ,25  ,25  ,25  ,25  ,No
+Isosceles  ,Large,No  ,1   ,1   ,0   ,0   ,No
+Isosceles  ,Small,Yes ,4095,4095,1   ,1   ,No
+Isosceles  ,Small,No  ,100 ,0   ,0   ,0   ,No
+Isosceles  ,Small,Yes ,101 ,0   ,0   ,0   ,No
+Isosceles  ,Small,Yes ,50  ,50  ,0   ,0   ,No
+Isosceles  ,Large,No  ,33  ,34  ,33  ,0   ,No
+Isosceles  ,Small,Yes ,25  ,25  ,25  ,26  ,No
+Scalene    ,Large,No  ,1   ,1   ,4095,4095,No
+Scalene    ,Small,Yes ,4095,4095,0   ,0   ,No
+Scalene    ,Small,No  ,100 ,0   ,0   ,0   ,No
+Scalene    ,Small,No  ,101 ,0   ,0   ,0   ,No
+Scalene    ,Large,No  ,50  ,51  ,0   ,0   ,No
+Scalene    ,Small,No  ,33  ,34  ,34  ,0   ,No
+Scalene    ,Small,No  ,25  ,25  ,25  ,25  ,No
+Square     ,Large,No  ,1   ,1   ,1   ,1   ,No
+Square     ,Small,Yes ,4095,4095,4095,4095,No
+Square     ,Large,Yes ,100 ,0   ,0   ,0   ,No
+Square     ,Small,No  ,101 ,0   ,0   ,0   ,No
+Square     ,Large,Yes ,50  ,50  ,0   ,0   ,No
+Square     ,Small,Yes ,33  ,34  ,33  ,0   ,No
+Square     ,Large,No  ,25  ,25  ,25  ,26  ,No
+Rectangle  ,Large,No  ,1   ,1   ,1   ,1   ,No
+Rectangle  ,Small,Yes ,4095,4095,4095,4095,No
+Rectangle  ,Small,Yes ,100 ,0   ,0   ,0   ,No
+Rectangle  ,Large,No  ,101 ,0   ,0   ,0   ,No
+Rectangle  ,Small,No  ,50  ,51  ,0   ,0   ,No
+Rectangle  ,Small,No  ,33  ,34  ,34  ,0   ,No
+Rectangle  ,Large,Yes ,25  ,25  ,25  ,25  ,No
+Line       ,Large,No  ,4095,1   ,1   ,1   ,No
+Ellipse    ,Small,Yes ,4095,4095,4095,1   ,No
+Circle     ,Large,No  ,50  ,50  ,0   ,0   ,No
+Equilateral,Large,No  ,50  ,50  ,0   ,0   ,No
+Scalene    ,Large,No  ,50  ,50  ,0   ,0   ,No
+Rectangle  ,Large,No  ,50  ,50  ,0   ,0   ,No
+Line       ,Large,No  ,50  ,51  ,0   ,0   ,No
+Ellipse    ,Large,No  ,50  ,51  ,0   ,0   ,No
+Isosceles  ,Large,Yes ,50  ,51  ,0   ,0   ,No
+Square     ,Large,No  ,50  ,51  ,0   ,0   ,No
+Scalene    ,Small,No  ,4095,1   ,1   ,1   ,No
+Isosceles  ,Large,Yes ,1   ,1   ,4095,4095,No
+Circle     ,Small,Yes ,33  ,34  ,33  ,0   ,No
+Equilateral,Large,Yes ,33  ,34  ,33  ,0   ,No
+Scalene    ,Small,No  ,33  ,34  ,33  ,0   ,No
+Rectangle  ,Large,No  ,33  ,34  ,33  ,0   ,No
+Line       ,Large,No  ,33  ,34  ,34  ,0   ,No
+Ellipse    ,Large,No  ,33  ,34  ,34  ,0   ,No
+Isosceles  ,Small,No  ,33  ,34  ,34  ,0   ,No
+Square     ,Small,Yes ,33  ,34  ,34  ,0   ,No
+Equilateral,Large,Yes ,4095,1   ,1   ,1   ,No
+Circle     ,Large,Yes ,1   ,1   ,1   ,4095,No
+Equilateral,Large,Yes ,1   ,1   ,1   ,4095,No
+Circle     ,Small,Yes ,25  ,25  ,25  ,26  ,No
+Equilateral,Large,Yes ,25  ,25  ,25  ,26  ,No
+Scalene    ,Small,Yes ,25  ,25  ,25  ,26  ,No
+Rectangle  ,Small,Yes ,25  ,25  ,25  ,26  ,No
+Line       ,Small,Yes ,25  ,25  ,25  ,25  ,No
+Ellipse    ,Large,Yes ,25  ,25  ,25  ,25  ,No
+Isosceles  ,Large,No  ,25  ,25  ,25  ,25  ,No
+Square     ,Small,Yes ,25  ,25  ,25  ,25  ,No
