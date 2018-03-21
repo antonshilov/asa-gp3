@@ -8,15 +8,15 @@ Circle     ,Large,No  ,33  ,33  ,4095,0   ,No
 Circle     ,Small,Yes ,48  ,1   ,0   ,0   ,No
 Circle     ,Small,No  ,31  ,31  ,0   ,0   ,Yes
 Ellipse    ,Large,Yes ,50  ,1   ,0   ,0   ,No
-Ellipse    ,Large,No  ,51  ,1   ,0   ,0   ,Yes
+Ellipse    ,Large,No  ,53  ,1   ,0   ,0   ,Yes
 Ellipse    ,Small,Yes ,1   ,48  ,0   ,0   ,Yes
 Ellipse    ,Small,No  ,1   ,48  ,0   ,0   ,No
 Equilateral,Large,Yes ,32  ,32  ,32  ,0   ,No
 Equilateral,Large,No  ,4095,4095,4095,0   ,Yes
 Equilateral,Small,Yes ,32  ,32  ,32  ,0   ,Yes
 Equilateral,Small,No  ,31  ,33  ,33  ,0   ,No
-Isosceles  ,Large,Yes ,1   ,1   ,4095,0   ,No
-Isosceles  ,Large,No  ,1   ,1   ,4095,0   ,Yes
+Isosceles  ,Large,Yes ,1   ,1   ,4094,0   ,No
+Isosceles  ,Large,No  ,1   ,4095,4095,0   ,Yes
 Isosceles  ,Small,Yes ,48  ,48  ,1   ,0   ,Yes
 Isosceles  ,Small,No  ,1   ,1   ,1   ,0   ,No
 Scalene    ,Large,Yes ,36  ,45  ,28  ,0   ,No
@@ -25,12 +25,13 @@ Scalene    ,Small,Yes ,32  ,40  ,24  ,0   ,Yes
 Scalene    ,Small,No  ,32  ,24  ,40  ,0   ,No
 Square     ,Large,Yes ,4095,4095,4094,0   ,No
 Square     ,Large,No  ,27  ,27  ,27  ,27  ,Yes
-Square     ,Small,Yes ,25  ,25  ,25  ,25  ,Yes
+Square     ,Small,Yes ,25  ,25  ,25  ,25  ,No
 Square     ,Small,No  ,97  ,1   ,1   ,1   ,No
 Rectangle  ,Large,Yes ,2   ,4095,4095,2   ,No
 Rectangle  ,Large,No  ,1   ,4095,1   ,4095,Yes
 Rectangle  ,Small,Yes ,2   ,1   ,2   ,1   ,Yes
 Rectangle  ,Small,No  ,27  ,25  ,27  ,25  ,No
-Circle     ,Large,Yes ,4095,4095,0   ,0   ,Yes
+Circle     ,Large,Yes ,4094,4094,0   ,0   ,Yes
 Line       ,Small,Yes ,100 ,1   ,0   ,0   ,No
 Circle     ,Large,Yes ,34  ,34  ,1   ,0   ,No
+Isosceles  ,Large,Yes ,2   ,4095,4094,0   ,No

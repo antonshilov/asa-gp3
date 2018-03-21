@@ -1,5 +1,7 @@
 package team.gp3;
 
+import java.util.ArrayList;
+
 public class ShapeClassifier {
   private int badGuesses;
   private String[] threeParamGuesses = {"Equilateral", "Isosceles", "Scalene"};
@@ -53,8 +55,8 @@ public class ShapeClassifier {
         break;
       case 3:
         shapeGuessResult = classify3Parameters(parameters[0], parameters[1],parameters[2]);
-          calcPerim = calculateTrianglePerimeter(parameters[1], parameters[1], parameters[2]); //bug
-//        calcPerim = calculateTrianglePerimeter(parameters[0], parameters[1],parameters[2]); //bug
+//          calcPerim = calculateTrianglePerimeter(parameters[1], parameters[1], parameters[2]); //bug t22,t23
+        calcPerim = calculateTrianglePerimeter(parameters[0], parameters[1], parameters[2]);
           product = parameters[0] * parameters[1] * parameters[2];
 
           break;
@@ -183,7 +185,8 @@ public class ShapeClassifier {
       if (b > 0) {
         return twoParamGuesses[1];
       }
-    } else if (a > 1) {
+//    } else if (a > 1) { //BUG t11
+    } else if (a >= 1) {
       if (b != 0) {
         return twoParamGuesses[1];
       }
@@ -216,13 +219,19 @@ public class ShapeClassifier {
 
   // Classify a triangle based on the length of its sides
   private String classify3Parameters(int a, int b, int c) {
-
+    ArrayList<Integer> params = new ArrayList<>();
+    params.add(a);
+    params.add(b);
+    params.add(c);
+    params.sort((o1, o2) -> o1 - o2);
     if ( (a < (b+c)) && (b < (a + c)) && (c < (a+b))) {
       if (a == b && b == c) {
         return threeParamGuesses[0]; // Equilateral
-      } else if (a!=b && a!=c && b!=c) {
+//      } else if (a!=b && a!=c && b!=c) {
+      } else if (((params.get(0) * params.get(0)) + (params.get(1) * params.get(1))) == (params.get(2) * params.get(2))) { //BUG t21
         return threeParamGuesses[2]; // Scalene
-      } else {
+//      } else {  //Bug t36
+      } else if (a == b || b == c || a == c) {
         return threeParamGuesses[1]; // Isosceles
       }
     }
