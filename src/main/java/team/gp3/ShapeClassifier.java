@@ -104,9 +104,12 @@ public class ShapeClassifier {
   }
 
   // P = 2 * PI *r
-//BUG
-  private int calculateCirclePerimeter(int r) {
-    return (int) (2 * Math.PI * r);
+//BUG d4
+//  private int calculateCirclePerimeter(int r) {
+//    return (int) (2 * Math.PI * r);
+//  }
+  private int calculateCirclePerimeter(int d) {
+    return (int) (Math.PI * d);
   }
 
   // P = 4 * s
@@ -119,7 +122,7 @@ public class ShapeClassifier {
     if (side1 == side2) {
 
       return (2 * side1) + (2 * side3);
-//      BUG
+//      BUG 8
 //    } else if (side2 == side3) {
     } else if (side1 == side3) {
       return (2 * side1) + (2 * side2);
@@ -136,6 +139,8 @@ public class ShapeClassifier {
   // This is an approximation
   // PI(3(a+b) - sqrt((3a+b)(a+3b))
   private int calculateEllipsePerimeter(int a, int b) {
+//      /2 bug 3 8 diameter not radius
+//      double da = a, db = b;
       double da = a / 2.0, db = b / 2.0;
     return (int) ((int) Math.PI * (3 * (da+db) - Math.sqrt((3*da+db)*(da+3*db))));
   }

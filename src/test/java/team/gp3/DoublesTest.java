@@ -37,33 +37,5 @@ public class DoublesTest {
         return !value.equals("0") ? "," + value : "";
     }
 
-//    private static StringBuffer sbTestResults = new StringBuffer();
-
-//    @AfterClass
-//    public static void exportCsvResult() throws IOException {
-//        BufferedWriter resultWriter = Files.newBufferedWriter(
-//                Paths.get("C:\\Users\\vaccu\\workspace\\Gp3\\src-gen\\triples_Results.csv"),
-//                Charset.defaultCharset());
-//        resultWriter.write("Shape, Size, Even, p1, p2, p3, p4, TestResult");
-//        resultWriter.newLine();
-//        resultWriter.write(sbTestResults.toString());
-//        resultWriter.close();
-//    }
-//
-//    @ClassRule
-//    public static TestWatcher addCsvResult = new TestWatcher() {
-//        @Override
-//        protected void succeeded(Description description) {
-//            sbTestResults.append(", Passed")
-//                    .append(System.getProperty("line.separator"));
-//        }
-//
-//        @Override
-//        protected void failed(Throwable e, Description description) {
-//            sbTestResults.append(", Failed")
-//                    .append(System.getProperty("line.separator"));
-//        }
-//    };
-
 
 }
