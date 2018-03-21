@@ -6,4 +6,4 @@ Equilateral,Small,Yes ,33 ,33,34,0 ,No
 Isosceles  ,Large,Yes ,33 ,34,34,0 ,Yes
 Scalene    ,Large,Yes ,27 ,36,45,0 ,Yes
 Square     ,Large,Yes ,26 ,26,26,26,Yes
-Rectangle  ,Large,Yes ,25 ,25,26,26,Yes
+Rectangle  ,Large,Yes ,25 ,26,25,26,Yes

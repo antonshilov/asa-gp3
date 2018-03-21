@@ -19,6 +19,7 @@ public class ShapeClassifier {
     String sizeGuess = getSizeGuess(arg);
     String evenOddGuess = getEvenOddGuess(arg);
     int calcPerim = 0;
+      int product = 0;
 
     if (shapeGuess == null)
       shapeGuess = "";
@@ -35,26 +36,37 @@ public class ShapeClassifier {
         if (shapeGuess.equals("Line")) {
           shapeGuessResult = shapeGuess;
           calcPerim = parameters[0];
+            product = parameters[0];
+
         }
         break;
       case 2:
-        shapeGuessResult = classify2Parameters(parameters[1], parameters[1]);
+//        shapeGuessResult = classify2Parameters(parameters[1], parameters[1]);  //BUG
+          shapeGuessResult = classify2Parameters(parameters[0], parameters[1]);
         if (shapeGuessResult.equals("Ellipse")) {
           calcPerim = calculateEllipsePerimeter(parameters[0],parameters[1]);
+            product = parameters[0] * parameters[1];
         } else {
           calcPerim = calculateCirclePerimeter(parameters[0]);
+            product = parameters[0] * parameters[0];
         }
         break;
       case 3:
         shapeGuessResult = classify3Parameters(parameters[0], parameters[1],parameters[2]);
-        calcPerim = calculateTrianglePerimeter(parameters[1], parameters[1],parameters[2]);
-        break;
+          calcPerim = calculateTrianglePerimeter(parameters[1], parameters[1], parameters[2]); //bug
+//        calcPerim = calculateTrianglePerimeter(parameters[0], parameters[1],parameters[2]); //bug
+          product = parameters[0] * parameters[1] * parameters[2];
+
+          break;
       case 4:
         shapeGuessResult = classify4Parameters(parameters[0], parameters[1],parameters[2], parameters[3]);
         if (shapeGuessResult.equals("Rectangle")) {
-          calcPerim = calculateRectanglePerimeter(parameters[0], parameters[3],parameters[2], parameters[3]);
+//          calcPerim = calculateRectanglePerimeter(parameters[0], parameters[3],parameters[2], parameters[3]);// BUG
+            calcPerim = calculateRectanglePerimeter(parameters[0], parameters[1], parameters[2], parameters[3]);
+            product = parameters[0] * parameters[1] * parameters[2] * parameters[3];
         } else {
           calcPerim = calculateRectanglePerimeter(parameters[0], parameters[1],parameters[2], parameters[3]);
+            product = parameters[0] * parameters[1] * parameters[2] * parameters[3];
         }
     }
 
@@ -67,13 +79,15 @@ public class ShapeClassifier {
 
     // check the size guess
 
-    if (calcPerim > 200 && sizeGuess.equals("Large")) {
+//    if (calcPerim > 200 && sizeGuess.equals("Large")) { //Bug single
+      if (calcPerim > 100 && sizeGuess.equals("Large")) {
       isSizeGuessCorrect = true;
-    } else isSizeGuessCorrect = calcPerim < 10 && sizeGuess.equals("Small");
-
-    if ( 0 == (calcPerim % 2) && evenOddGuess.equals("Yes")) {
+//    } else isSizeGuessCorrect = calcPerim < 10 && sizeGuess.equals("Small"); Bug single
+      } else isSizeGuessCorrect = calcPerim <= 100 && sizeGuess.equals("Small");
+// BUG NOT PERIM but product of sides
+      if (0 == (product % 2) && evenOddGuess.equals("Yes")) {
       isEvenOddCorrect = true;
-    } else isEvenOddCorrect = 0 != (calcPerim % 2) && evenOddGuess.equals("No");
+      } else isEvenOddCorrect = 0 != (product % 2) && evenOddGuess.equals("No");
 
     if (isShapeGuessCorrect && isSizeGuessCorrect && isEvenOddCorrect) {
       badGuesses=0;
@@ -90,6 +104,7 @@ public class ShapeClassifier {
   }
 
   // P = 2 * PI *r
+//BUG
   private int calculateCirclePerimeter(int r) {
     return (int) (2 * Math.PI * r);
   }
@@ -104,7 +119,9 @@ public class ShapeClassifier {
     if (side1 == side2) {
 
       return (2 * side1) + (2 * side3);
-    } else if (side2 == side3) {
+//      BUG
+//    } else if (side2 == side3) {
+    } else if (side1 == side3) {
       return (2 * side1) + (2 * side2);
     }
 
@@ -119,7 +136,7 @@ public class ShapeClassifier {
   // This is an approximation
   // PI(3(a+b) - sqrt((3a+b)(a+3b))
   private int calculateEllipsePerimeter(int a, int b) {
-    double da = a, db = b;
+      double da = a / 2.0, db = b / 2.0;
     return (int) ((int) Math.PI * (3 * (da+db) - Math.sqrt((3*da+db)*(da+3*db))));
   }
 
@@ -171,16 +188,24 @@ public class ShapeClassifier {
 
   // Classify four sides
   private String classify4Parameters(int a, int b, int c, int d) {
-    if (a == b && c == d) {
-      if (a != c) {
-        return fourParamGuesses[1];
-      } else
-        return fourParamGuesses[0];
-    } else if (b == d && c == a) {
-      return fourParamGuesses[0];
-    } else if (b == c && a == d) {
-      return fourParamGuesses[0];
-    }
+//    if (a == b && c == d) {
+//////      if (a != c) {//bug square
+////      if (a == c) {//bug square
+////        return fourParamGuesses[1];
+////      } else
+////        return fourParamGuesses[0];
+////    } else if (b == d && c == a) {
+////      return fourParamGuesses[0];
+////    } else if (b == c && a == d) {
+////      return fourParamGuesses[0];
+////    }
+      if (a == b && b == c && c == d) {
+          return "Square";
+      } else {
+          if (a == c && b == d) {
+              return "Rectangle";
+          }
+      }
     return  "";
   }
 
