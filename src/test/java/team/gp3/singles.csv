@@ -1,7 +1,7 @@
 Shape      ,Size ,Even,p1 ,p2,p3,p4,Result
 Line       ,Small,Yes ,100,0 ,0 ,0 ,Yes
-Circle     ,Large,No  ,51 ,51,0 ,0 ,Yes
-Ellipse    ,Small,Yes ,50 ,49,0 ,0 ,Yes
+Circle     ,Large,No  ,35 ,35,0 ,0 ,Yes
+Ellipse    ,Small,Yes ,32 ,30,0 ,0 ,Yes
 Equilateral,Small,Yes ,33 ,33,34,0 ,No
 Isosceles  ,Large,Yes ,33 ,34,34,0 ,Yes
 Scalene    ,Large,Yes ,27 ,36,45,0 ,Yes
